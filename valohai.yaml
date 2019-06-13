@@ -1,0 +1,12 @@
+---
+
+- step:
+    name: mytest
+    image: ufoym/deepo:all-py36-cpu
+    command: python train.py {parameters}
+    parameters:
+     - name: iterations
+       pass-as: --iterations={v}
+       description: Example parameter
+       type: integer
+       default: 300
